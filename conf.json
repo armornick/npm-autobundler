@@ -1,0 +1,15 @@
+{
+	"main-bundle": ["npm", "harp", "npmbox", "shelljs","underscore"],
+	
+	"script-bundle": ["less", "sass", "stylus", "coffee-script","jade","marked"],
+	
+	"!grunt-bundle": ["grunt-cli", "grunt", "grunt-contrib-clean", "grunt-contrib-concat", "grunt-contrib-copy", "grunt-contrib-cssmin", "grunt-contrib-jade", "grunt-contrib-less", "grunt-contrib-sass", "grunt-contrib-stylus", "grunt-contrib-uglify", "grunt-contrib-watch", "grunt-uncss"],
+	
+	"!wintersmith-bundle": ["wintersmith", "wintersmith-ejs", "wintersmith-haml", "wintersmith-liquid", "wintersmith-livereload", "wintersmith-markdown-it", "wintersmith-sass", "wintersmith-uglify2", "wintersmith-coffee", "wintersmith-browserify","wintersmith-tag","wintersmith-handlebars"],
+
+	"!metalsmith-bundle": ["metalsmith", "metalsmith-assets", "metalsmith-autoprefixer", "metalsmith-autotoc", "metalsmith-clean-css", "metalsmith-cleanscript", "metalsmith-coffee","metalsmith-collections","metalsmith-copy","metalsmith-drafts","metalsmith-each","metalsmith-excerpts","metalsmith-feed","metalsmith-gist","metalsmith-gzip","metalsmith-headings","metalsmith-headings-identifier","metalsmith-html-minifier","metalsmith-ignore","metalsmith-include","metalsmith-jade","metalsmith-json","metalsmith-less","metalsmith-markdown","metalsmith-markdownit","metalsmith-metadata","metalsmith-more","metalsmith-paginate","metalsmith-pagination","metalsmith-partial","metalsmith-prompt","metalsmith-sass","metalsmith-serve","metalsmith-static","metalsmith-stylus","metalsmith-tags","metalsmith-templates","metalsmith-title","metalsmith-uglify","metalsmith-watch"],
+	
+	"!consolidate-bundle": ["consolidate", "eco", "ejs","hamljs","handlebars","jade","tinyliquid","mustache"],
+
+	"!gulp-bundle": ["gulp","gulp-util","gulp-coffee","gulp-concat","gulp-uglify","gulp-imagemin","gulp-minify-html","gulp-minify-css","gulp-less","gulp-sass","gulp-jshint","gulp-coffeelint","gulp-rename","gulp-header","gulp-clean","gulp-filesize","gulp-changed","gulp-watch","gulp-stylus","gulp-load-plugins","gulp-connect","gulp-ruby-sass","gulp-jade"]
+}
