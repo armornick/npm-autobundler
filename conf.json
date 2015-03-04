@@ -1,7 +1,7 @@
 {
-	"main-bundle": ["npm", "harp", "npmbox", "shelljs","underscore"],
+	"!main-bundle": ["npm", "harp", "npmbox", "shelljs","underscore"],
 	
-	"script-bundle": ["less", "sass", "stylus", "coffee-script","jade","marked"],
+	"!script-bundle": ["less", "sass", "stylus", "coffee-script","jade","marked"],
 	
 	"!grunt-bundle": ["grunt-cli", "grunt", "grunt-contrib-clean", "grunt-contrib-concat", "grunt-contrib-copy", "grunt-contrib-cssmin", "grunt-contrib-jade", "grunt-contrib-less", "grunt-contrib-sass", "grunt-contrib-stylus", "grunt-contrib-uglify", "grunt-contrib-watch", "grunt-uncss"],
 	
@@ -11,5 +11,9 @@
 	
 	"!consolidate-bundle": ["consolidate", "eco", "ejs","hamljs","handlebars","jade","tinyliquid","mustache"],
 
-	"!gulp-bundle": ["gulp","gulp-util","gulp-coffee","gulp-concat","gulp-uglify","gulp-imagemin","gulp-minify-html","gulp-minify-css","gulp-less","gulp-sass","gulp-jshint","gulp-coffeelint","gulp-rename","gulp-header","gulp-clean","gulp-filesize","gulp-changed","gulp-watch","gulp-stylus","gulp-load-plugins","gulp-connect","gulp-ruby-sass","gulp-jade"]
+	"!gulp-bundle": ["gulp","gulp-util","gulp-coffee","gulp-concat","gulp-uglify","gulp-imagemin","gulp-minify-html","gulp-minify-css","gulp-less","gulp-sass","gulp-jshint","gulp-coffeelint","gulp-rename","gulp-header","gulp-clean","gulp-filesize","gulp-changed","gulp-watch","gulp-stylus","gulp-load-plugins","gulp-connect","gulp-ruby-sass","gulp-jade"],
+
+	"!npm": ["npm"],
+
+	"docpad-bundle": ["docpad","docpad-plugin-eco","docpad-plugin-marked","docpad-plugin-stylus","docpad-plugin-coffeescript","docpad-plugin-livereload","docpad-plugin-partials","docpad-plugin-less","docpad-plugin-jade","docpad-plugin-cleanurls","docpad-plugin-coffeekup","docpad-plugin-text","docpad-plugin-related","docpad-plugin-haml","docpad-plugin-highlightjs","docpad-plugin-gist","docpad-plugin-sass","docpad-plugin-dateurls","docpad-plugin-alias","docpad-plugin-rss","docpad-plugin-uglify","docpad-plugin-handlebars","docpad-plugin-haml","docpad-plugin-slim","docpad-plugin-swig","docpad-plugin-ignoreincludes","docpad-plugin-tags","docpad-plugin-tagcloud"]
 }
