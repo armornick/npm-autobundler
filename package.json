@@ -4,18 +4,18 @@
   "description": "a way to install packages without breaking my portable node install",
   "repository": "not applicable",
   "author": {
-  		"name": "armornick",
-  		"url": "https://github.com/armornick"
-  	},
+    "name": "armornick",
+    "url": "https://github.com/armornick"
+  },
   "dependencies": {
     "commander": "^2.6.0",
     "shelljs": "^0.3.0"
   },
   "bin": {
-  	"autobundle": "./index.js"
+    "autobundle": "./index.js"
   },
   "scripts": {
-  	"start": "node index.js"
+    "start": "node index.js"
   },
   "license": "Unlicense"
 }

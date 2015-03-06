@@ -40,6 +40,10 @@ Starting a bundle name with `!` will automatically exclude it from being install
 	}
 
 
+## zip-files.js
+
+An added program to bundle the directories with the packages into 7z archives. For this to work, make sure the 7za executable is available. On Windows, put the executable in the build directory. If you changed your build directory location, you need to change the setting in the source file as it is currently hardcoded.
+
 
 ## API Documentation
 
