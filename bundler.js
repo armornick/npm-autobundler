@@ -36,13 +36,14 @@ function doNpmBox (options, packages) {
 	if (options.simulation) {
 		console.log(cmd);
 	} else {
-		exec(cmd, function (error, stdout, stderr) {
-			console.log(stdout);
-			if (error) { 
-				console.log(error);
-				throw error;
-			}
-		});
+		// exec(cmd, function (error, stdout, stderr) {
+		// 	console.log(stdout);
+		// 	if (error) { 
+		// 		console.log(error);
+		// 		throw error;
+		// 	}
+		// });
+		execSync(cmd);
 	};
 }
 
