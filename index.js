@@ -35,7 +35,21 @@ options.buildDir = path.join(process.cwd(), program.output);
 // load the configuration file
 var config = JSON.parse(readFile(program.conf));
 
-// console.log(options) // for debugging purposes
+// check whether we have bundles specified
+if (program.args.length > 0) {
+
+	var fullConf = config; config = {};
+
+	program.args.forEach(function (bundle) {
+		// console.log(bundle);
+		var bundleSpec = fullConf[bundle] || fullConf[bundle+'-bundle'] || fullConf['!'+bundle] || fullConf['!'+bundle+'-bundle'];
+		if (bundleSpec) { config[bundle] = bundleSpec; };
+	});
+
+};
+
+// console.log(options); // for debugging purposes
+// console.log(config); // for debugging purposes
 
 // start the bundling
 bundle(options, config);
