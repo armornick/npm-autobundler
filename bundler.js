@@ -53,13 +53,27 @@ function doNpmBox (options, packages) {
 */
 function doNpmInstall (options, packages) {
 	var cmd = util.format("npm install --save %s", packages.join(" "));
-	
+
 	if (options.simulation) {
 		console.log(cmd);
 	} else {
 		makePackageJson();
 		execSync(cmd);
 	};
+}
+
+function doNpmInstall2 (options, packages) {
+	
+	if (options.simulation) { doNpmInstall(options, packages) };
+
+	function installPackage (pkg) {
+		var cmd = util.format("npm install --save %s", pkg);
+		execSync(cmd);
+	}
+
+	makePackageJson();
+	packages.forEach(installPackage);
+
 }
 
 /*
@@ -74,7 +88,7 @@ function doInstallPackages (options, packages) {
 	}
 
 	if (options.npm) {
-		doNpmInstall(options, packages);
+		doNpmInstall2(options, packages);
 	}
 }
 
