@@ -4,20 +4,28 @@ This is an application to locally gather npm modules to be used in a portable No
 
 When doing `npm update -g` on a portable install, it breaks npm when it tries to upgrade itself since there is only the global configuration for npm. In a non-portable node install, any npm upgrades would be installed to the user's home directory.
 
+> (**Later Note**: this only happened because the original Node Portable set the npm directory to the main node directory and is easily solved by changing the node prefix.)
+
 The directory where the node modules are bundled contains a dummy `package.json` file, which easily allows you to see which versions have been installed.
 
 To transfer the packages installed in this project, transfer the `.bin` directory to the root of the portable Node install, replacing the `..` with `node_modules` in the cmd files, and the rest of the `node_modules` directory to said directory in the portable Node install.
 
+The bundler also supports the installation of Bower packages. When there are conflicts in the dependency versions, the latest will automatically be selected. (Bower is run with the `-F` argument.)
+
+If the `7za` executable is available on the PATH, the `-z` parameter can be set to automatically create a 7z archive from the directory where the packages are installed.
 
 ## Executable options
 
-    -h, --help                 output usage information
-    -V, --version              output the version number
-    -b, --npmbox               Execute the npmbox commands
-    -n, --no-install           Don't execute the npm commands
-    -s, --simulation           Only output the commands, don't execute them.
-    -f, --conf [input-file]    Use the given configuration file. Default: conf.json
-    -o, --output [output-dir]  Use the given build directory. Default: build
+    -s, --simulation   don't execute commands                            [boolean]
+    -i, --no-install   don't perform npm installation                    [boolean]
+    -m, --monolith     execute npm install as single command (bigger chance of
+                     failure)                                          [boolean]
+    -b, --npmbox       execute npmbox command                            [boolean]
+    -f, --config-file  set bundle file to read (top dir or config directory)
+                                                          [default: "conf.json"]
+    -o, --output-dir   set build directory                      [default: "build"]
+    -z, --zip          create a 7z file from the bundle directory        [boolean]
+    -h, --help         Show help                                         [boolean]
 
 
 
@@ -29,6 +37,9 @@ In the configuration file, the key denotes the directory in which the files will
 
 Starting a bundle name with `!` will automatically exclude it from being installed.
 
+The configuration file can specify the type of packages to install via the `"$type"` key, which can be set to `npm` or `bower` to specify the respective package manager. If no type key is set, the bundler defaults to 
+
+
 ### Example configuration file
 
 	{
@@ -39,24 +50,43 @@ Starting a bundle name with `!` will automatically exclude it from being install
 		"!will-not-be-crated": ["harp"]
 	}
 
+### Example Bower configuration file
 
-## zip-files.js
+    {
+        "$type": "bower",
 
-An added program to bundle the directories with the packages into 7z archives. For this to work, make sure the 7za executable is available. On Windows, put the executable in the build directory. If you changed your build directory location, you need to change the setting in the source file as it is currently hardcoded.
+        "bower-packages-to-install": ["backbone","backbone.layoutmanager","jquery"]
+    }
+
 
 
 ## API Documentation
 
-The `bundle` module (which shouldn't actually be used by itself) exports a single function with the following signature: `makeBundle (options, config)`.
+The bundler can also be used as a library. The main bundler code is in `lib/bundler.js`, which exports the Bundler class.
 
-The `config` argument is simply the imported json file. See above for the specifications.
+The Bundler takes two arguments: a configuration object, and a map with the bundle names and a list of packages. After instantiating the Bundler, all the magic happens by itself.
 
-The `options` argument tells the bundler what to do. No defaults are created in the function itself so the object must be complete before being passed to the function. The following arguments are supported:
+The possible configuration keys are:
 
-* `buildDir`: The root directory where the packages will be installed. Required.
-* `npm`: Flags whether or not to do the local npm install. Optional.
-* `npmbox`: Flags whether or not to fetch the package using [npmbox](https://github.com/arei/npmbox). Optional.
-* `simulation`: Flags whether the bundler should only output the commands it would use. If this flag is set, the commands are *not* executed. Optional.
+* *$type*: whether to install npm or bower packages. defaults to npm.
+* *zip*: whether to make 7z packages with 7za. defaults to false.
+* *simulation*: whether to skip the actual execution of the commands. defaults to false.
+* *buildDir*: directory in which to create the bundles. defaults to 'build'.
+* *install*: whether to perform npm installation. only applies to $type npm. defaults to false.
+* *npmbox*: whether to perform npmbox command. only applies to $type npm. defaults to false.
+* *monolith*: whether to perform npm installation in a single command. has proven unreliable but might be useful. only applies to $type npm. defaults to false.
+
+### Example Usage
+
+    var Bundler = require('./lib/bundler')
+
+    var cfg = { install: true, zip: true, buildDir: 'other-directory' }
+    var bundles = {
+        "some-libraries": ['underscore','jquery','moment'],
+        "!wont-be-executed": ['harp']
+    }
+
+    var b = new Bundler(cfg, bundles)
 
 
 ## License

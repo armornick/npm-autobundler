@@ -1,5 +1,0 @@
-{
-	"more-libraries": ["react-tools","browserify","typescript","underscore","jquery","soma.js","backbone","knockout","vue","mithril","spine.app","hem","angular","sails","react","ampersand","ampersand-view","ampersand-model","ampersand-router","ampersand-state","ampersand-collection","ampersand-dom","ampersand-form-view","ampersand-input-view","ampersand-registry","ampersand-rest-collection","ampersand-select-view","ampersand-view-switcher","backbone-events-standalone","domify","domready","domthing","extend-object","jxt","moment","xhr","backbone.marionette","backbone.layoutmanager","colors.css","knockback",""],
-
-	"angular-bundle": ["angular","angular-route","angular2","angular-animate","angular-aria","angular-cookies","angular-i18n","angular-material","angular-messages","angular-sanitize","angular-resource"]
-}

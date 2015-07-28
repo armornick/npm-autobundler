@@ -1,0 +1,29 @@
+{
+	"$type": "bower",
+
+	"misc-bundle": ["underscore","moment","normalize.css","chartjs","impress.js","animate.css","async","polymer","skrollr","d3","fastclick","masonry","skeleton","mustache.js","handlebars","helpers","history.js","phaser","skel","skel-baseline","director","xhr","knockback","responsive-nav", "list.js", "easeljs", "SoundJS", "TweenJS", "PreloadJS", "prism", "highlightjs", "moment-timezone","marked","markdown-it","nunjucks","RoyJacobs/intravenous"],
+
+	"spa-bundle": ["backbone","knockout","mithril","vue","soma.js","soma-events","soma-template","rivets","ractive","riot","flux","react","drv.js"],
+
+	"vue-bundle": ["vue","vue-grid","vue-resource","vue-element","vue-panel","vue-bootstrap","vue-validator","vue-i18n"],
+
+	"backbone-bundle": ["backbone","backbone.stickit","backbone-validation","backbone-forms","backbone.giraffe","backbone.localStorage","marionette","Backbone.Handlebars","Backbone.Undo","gmac/backbone.epoxy","layoutmanager","backbone.validator","synapse-bind","backbone-relational","backform","backbone-react-component"],
+
+	"knockout-bundle": ["knockout","knockout-js-infinite-scroll","knockout-datatable","knockout-sortable","knockout-validation","knockout-bootstrap","knockout-postbox","falconjs","knockout-jqueryui","pagerjs"],
+
+	"angular-bundle": ["angular","angular-ui-router","angular-moment","angular-file-upload","angular-seed","angular-local-storage","restangular","angular-filter","angular-route","angular-formly","angular-strap","angular-uikit", "angular-ui-grid", "angular-charts", "angular-deckgrid", "angular-ui-calendar", "angular-scroll", "angular-chart.js", "angular-masonry", "angular-snap", "angular-timer","angular-material-design-light","ngFx","angular-ui-select","angular-ui-sortable","angular-ui-ace","angular-ui-map","angular-ui-tinymce","angular-ui-date","angular-ui-chart","angular-bootstrap","angular-animate","angular-resource","angular-aria","angular-cookies","angular-message-format","angular-sanitize","angular-touch","angular-microtext"],
+
+	"jquery-bundle": ["jquery","jquery-cookie","jquery-sticky","jquery-waypoints","jquery.stellar","jquery-timeago","jquery.transit","jquery-file-upload","jquery.scrollTo","jquery-notebook","jquery.ui","jquery-form","slick.js","jquery.atwho","sizzle","jquery.lazyload","jquery-masonry","fullcalendar","jquery-validation","fizzy-ui-utils","Caret.js","colorbox","FlexSlider","Scrollify","hisrc","jquery-timer","gridder","typeahead.js","countdown","sweetalert","freetile", "fancybox", "nivo-lightbox", "jQuery.mmenu", "jquery.countdown"],
+
+	"bootstrap-bundle": ["bootstrap","bootstrap-sass","bootstrap-stylus","bootstrap-material-design","metro-bootstrap","flat-ui"],
+
+	"css-framework-bundle": ["material-design-lite", "materialize", "uikit", "semantic-ui", "mui", "foundation", "metro-ui-css", "toolkit", "schema-ui", "penguin", "concise", "concise-less", "kube-scss", "purecss", "bootswatch", "gumby", "normalize.css"],
+
+	"css-grid-bundle": ["neat", "susy", "jeet", "ungrid", "flexiblegs-css", "gridism", "unsemantic", "gridle", "kindling", "griddo", "skeleton-scss", "skeleton-css", "skeleton-less", "crumpet", "lemonade", "1140-grid", "ungrid"],
+
+	"css-mixin-bundle": ["scut", "oban", "lesshat", "3l", "normalize.scss", "bourbon", "neat", "sass-flex-mixin", "juice"],
+
+	"microjs-bundle": ["plite","cssfx","dkraczkowski/collection.js","eventEmitter","bestiejs/json3","dubrowgn/telegraph","cookie-monster","bottlejs","devongovett/slang","mixit","keyten/Rat.js","micro-events","fermata","store2","adriancooney/tinyrequire","daniellmb/di.js","Jabher/cornerjs","cburgdorf/swiftcore.js","core_js","jeromeetienne/microevent.js","preach","KoryNunn/crel","dimitrinicolas/marmottajax","mailcheck","impress.js","time-js","js-coder/cookie.js#gh-pages","EarMaster/CSSClass","lightrouter","director","ctult/TinyDOM","mustache.js","infect","bullet","gmac/pods.js","list.js","rodrigoalvesvieira/microtext.js","infuse.js","soma.js","soma-events","soma-template","carpet","padolsey/satisfy","es5-shim","tag","dijon"],
+
+	"flightjs-bundle": ["flight","flight-with-child-components","flight-storage","flight-router","flight-keyboard-shortcuts","flight-hogan","flight-mustache","flight-viewport","flight-battery","flight-element","flight-forms","flight-geolocation","flight-knockout","flight-request","flight-scrollspy","flight-transition","flight-withEach","flight-with-state"]
+}

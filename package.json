@@ -1,21 +1,21 @@
 {
   "name": "npm-autobundler",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "a way to install packages without breaking my portable node install",
-  "repository": "not applicable",
+  "repository": "https://github.com/armornick/npm-autobundler",
   "author": {
     "name": "armornick",
     "url": "https://github.com/armornick"
   },
   "dependencies": {
-    "commander": "^2.6.0",
-    "shelljs": "^0.3.0"
+    "shelljs": "^0.3.0",
+    "yargs": "^3.15.0"
   },
   "bin": {
-    "autobundle": "./index.js"
+    "autobundle": "./bundle.js"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node bundle.js"
   },
   "license": "Unlicense"
 }

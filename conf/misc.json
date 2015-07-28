@@ -1,0 +1,5 @@
+{
+	"webpack-bundle": ["webpack","webpack-dev-server","grunt-webpack","css-loader","style-loader","json-loader","raw-loader","legacy-loader","file-loader","url-loader","uglify-loader","html-minify-loader","coffee-loader","coffee-jsx-loader","coffee-redux-loader","esnext-loader","babel-loader","traceur-loader","ts-loader","typescript-loader","html-loader","riotjs-loader","jade-loader","jade-html-loader","template-html-loader","handlebars-loader","dust-loader","ractive-loader","jsx-loader","ejs-loader","mustache-loader","yaml-loader","markdown-loader","remarkable-loader","ng-cache-loader","markdown-it-loader","ngtemplate-loader","jinja-loader","less-loader","stylus-loader","postcss-loader","namespace-css-loader","msx-loader"],
+
+	"misc-compiler-pack": ["riot","babel","babel-core","coffee-react","jsx-typescript","remarkable","remarkably","traceur","typescript","jade","handlebars","ractive","hogan.js","nunjucks","markdown-it","markdown-it-sub","markdown-it-sup","markdown-it-footnote","markdown-it-abbr","markdown-it-container","consolidate","eco","ect","ejs","mustache","msx","gulp-msx","grunt-msx"]
+}
